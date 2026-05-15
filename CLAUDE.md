@@ -75,4 +75,4 @@ All 5 records set to DNS only (gray cloud — not proxied):
 | Azure AZ-900 | https://learn.microsoft.com/en-us/users/marcusjardinez-8133/credentials/a4f731c0f05c9b07 | |
 | LPI Linux Essentials | https://cs.lpi.org/caf/Xamman/certification/verify/LPI000643778/9xww8wh2ts | |
 | ITIL v4 Foundation | https://www.peoplecert.org/for-corporations/certificate-verification-service | Requires CAPTCHA — cert # GR671727448MJ |
-| WGU B.S. IT | TBD | Placeholder card in sidebar, needs link |
+| WGU B.S. IT | https://www.wgu.edu/alumni/commencement/e-diploma-verification/validate.html | Requires code entry — code: 2580-5UHO-MWZ5 |
