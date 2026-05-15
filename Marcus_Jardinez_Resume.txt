@@ -1,0 +1,70 @@
+Marcus Jardinez
+Johnston, RI | (401) 426-9108 | Mark2k10@gmail.com | linkedin.com/in/marcusjardinez
+
+================================================================================
+SUMMARY
+================================================================================
+
+IT Operations Specialist with 3 years of experience delivering endpoint support
+and device lifecycle management in large-scale enterprise environments. Skilled in
+client OS support, hardware imaging and deployment, L1/L2 troubleshooting, and
+peripheral integration across wired and wireless networks. Proven ability to
+interface directly with end users, resolve issues efficiently, and maintain
+compliance with corporate IT security policies. Certified across CompTIA,
+Microsoft Azure, and AWS. Seeking to bring hands-on technical expertise and
+strong customer service skills to a healthcare IT environment.
+
+================================================================================
+EXPERIENCE
+================================================================================
+
+IT Operations Specialist | Dassault Systemes                  August 2023 - Present
+Johnston, RI (Contractor)
+
+  - Provided L1 and L2 technical support to on-site and remote end users via
+    phone, chat, and email, resolving hardware, software, client OS, and
+    peripheral compatibility issues in alignment with departmental policy and
+    security regulations.
+  - Imaged, configured, and deployed Windows workstations and laptops for new
+    hire onboarding, hardware replacements, and enterprise refresh cycles,
+    maintaining consistent standards across large-scale client rollouts.
+  - Performed software installations, OS upgrades, and routine patching across
+    client machines, ensuring compliance with corporate IT security policies and
+    minimizing recurring issues through documentation and escalation.
+  - Supported and maintained local IT infrastructure including laptops, desktops,
+    tablets, printers, AV systems, and unified communications devices connected
+    to the enterprise LAN.
+  - Tracked and reconciled IT assets in coordination with the asset management
+    team, maintaining deployment accuracy, inventory integrity, and full hardware
+    lifecycle accountability.
+  - Served as a technical resource for colleagues on hardware and software support
+    issues, contributing to consistent service delivery and high customer
+    satisfaction.
+
+Table Games Dealer | Bally's Twin River Casino            August 2015 - January 2023
+Lincoln, RI
+
+  - Delivered high-quality customer service across blackjack, craps, roulette,
+    and baccarat while maintaining strict compliance with gaming regulations and
+    procedural standards.
+  - Monitored gameplay for accuracy and fairness; resolved patron disputes
+    professionally in coordination with management.
+
+================================================================================
+EDUCATION
+================================================================================
+
+Bachelor of Science in Information Technology            Graduated March 2025
+Western Governors University
+
+================================================================================
+CERTIFICATIONS
+================================================================================
+
+  - CompTIA A+
+  - CompTIA Network+
+  - CompTIA Security+
+  - AWS Certified Cloud Practitioner
+  - Microsoft Azure Fundamentals (AZ-900)
+  - LPI Linux Essentials
+  - ITIL v4 Foundation Certificate in IT Service Management
