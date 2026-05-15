@@ -18,16 +18,26 @@
     a { color: #2563eb; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* ── Layout ── */
+    .layout {
+      display: flex;
+      align-items: flex-start;
+      gap: 24px;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+
+    /* ── Resume card ── */
     .page {
-      max-width: 860px;
-      margin: 40px auto;
+      flex: 1;
+      min-width: 0;
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.08);
       overflow: hidden;
     }
 
-    /* Header */
     .header {
       background: #1a1a2e;
       color: #fff;
@@ -47,15 +57,10 @@
       color: #c8d3e8;
     }
     .contact-bar a { color: #93c5fd; }
-    .contact-bar span::before {
-      content: '';
-    }
     .sep { color: #4a5568; }
 
-    /* Body */
     .body { padding: 36px 48px 48px; }
 
-    /* Section */
     .section { margin-bottom: 36px; }
     .section:last-child { margin-bottom: 0; }
 
@@ -70,14 +75,12 @@
       margin-bottom: 18px;
     }
 
-    /* Summary */
     .summary p {
       font-size: 0.97rem;
       color: #374151;
       line-height: 1.75;
     }
 
-    /* Experience */
     .job { margin-bottom: 26px; }
     .job:last-child { margin-bottom: 0; }
 
@@ -89,21 +92,9 @@
       gap: 4px;
       margin-bottom: 2px;
     }
-    .job-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #1a1a2e;
-    }
-    .job-dates {
-      font-size: 0.85rem;
-      color: #6b7280;
-      white-space: nowrap;
-    }
-    .job-meta {
-      font-size: 0.88rem;
-      color: #4b5563;
-      margin-bottom: 10px;
-    }
+    .job-title { font-size: 1rem; font-weight: 700; color: #1a1a2e; }
+    .job-dates { font-size: 0.85rem; color: #6b7280; white-space: nowrap; }
+    .job-meta { font-size: 0.88rem; color: #4b5563; margin-bottom: 10px; }
     .job-meta .badge {
       display: inline-block;
       background: #eff6ff;
@@ -116,10 +107,7 @@
       vertical-align: middle;
     }
 
-    .job ul {
-      list-style: none;
-      padding: 0;
-    }
+    .job ul { list-style: none; padding: 0; }
     .job ul li {
       position: relative;
       padding-left: 16px;
@@ -137,7 +125,6 @@
       top: 3px;
     }
 
-    /* Education */
     .edu-row {
       display: flex;
       justify-content: space-between;
@@ -145,27 +132,11 @@
       flex-wrap: wrap;
       gap: 4px;
     }
-    .edu-degree {
-      font-size: 0.97rem;
-      font-weight: 700;
-      color: #1a1a2e;
-    }
-    .edu-date {
-      font-size: 0.85rem;
-      color: #6b7280;
-    }
-    .edu-school {
-      font-size: 0.9rem;
-      color: #4b5563;
-      margin-top: 2px;
-    }
+    .edu-degree { font-size: 0.97rem; font-weight: 700; color: #1a1a2e; }
+    .edu-date { font-size: 0.85rem; color: #6b7280; }
+    .edu-school { font-size: 0.9rem; color: #4b5563; margin-top: 2px; }
 
-    /* Certifications */
-    .cert-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+    .cert-grid { display: flex; flex-wrap: wrap; gap: 10px; }
     .cert-pill {
       background: #f0f4ff;
       border: 1px solid #c7d7fd;
@@ -176,11 +147,86 @@
       border-radius: 999px;
     }
 
-    /* Floating download widget */
+    /* ── Sidebar ── */
+    .sidebar {
+      width: 256px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 24px;
+    }
+
+    .sidebar-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 10px;
+      padding-left: 2px;
+    }
+
+    .cred-card {
+      background: #fff;
+      border: 1px solid #e5e9f2;
+      border-radius: 9px;
+      padding: 12px 14px;
+      margin-bottom: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+    .cred-name {
+      font-size: 0.83rem;
+      font-weight: 700;
+      color: #1a1a2e;
+      margin-bottom: 2px;
+    }
+    .cred-issuer {
+      font-size: 0.75rem;
+      color: #6b7280;
+      margin-bottom: 8px;
+    }
+    .cred-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .verify-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #2563eb;
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 5px;
+      padding: 3px 10px;
+      text-decoration: none;
+      transition: background 0.12s;
+    }
+    .verify-btn:hover { background: #dbeafe; text-decoration: none; }
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #6b7280;
+      background: #f3f4f6;
+      border: 1px solid #e5e7eb;
+      border-radius: 5px;
+      padding: 3px 10px;
+      cursor: pointer;
+      transition: background 0.12s;
+    }
+    .copy-btn:hover { background: #e5e7eb; }
+    .cred-note {
+      font-size: 0.7rem;
+      color: #9ca3af;
+      margin-top: 4px;
+      line-height: 1.4;
+    }
+
+    /* ── Download widget (top-left) ── */
     .dl-widget {
       position: fixed;
-      bottom: 28px;
-      right: 28px;
+      top: 24px;
+      left: 24px;
       z-index: 100;
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
     }
@@ -188,33 +234,31 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 18px;
+      padding: 9px 16px;
       background: #1a1a2e;
       color: #fff;
       border: none;
       border-radius: 999px;
-      font-size: 0.85rem;
+      font-size: 0.83rem;
       font-weight: 600;
       cursor: pointer;
       box-shadow: 0 4px 16px rgba(0,0,0,0.22);
       transition: background 0.15s, transform 0.15s;
-      letter-spacing: 0.01em;
     }
     .dl-toggle:hover { background: #2d2d4e; transform: translateY(-1px); }
-    .dl-toggle svg { flex-shrink: 0; }
     .dl-menu {
       display: none;
       flex-direction: column;
       gap: 6px;
       position: absolute;
-      bottom: calc(100% + 10px);
-      right: 0;
+      top: calc(100% + 10px);
+      left: 0;
       background: #fff;
       border: 1px solid #e5e9f2;
       border-radius: 10px;
       padding: 8px;
       box-shadow: 0 8px 28px rgba(0,0,0,0.13);
-      min-width: 190px;
+      min-width: 200px;
     }
     .dl-menu.open { display: flex; }
     .dl-item {
@@ -256,25 +300,38 @@
       padding: 4px 0 2px;
     }
 
-    /* Print */
+    /* ── Print ── */
     @media print {
       body { background: #fff; }
-      .page { box-shadow: none; margin: 0; border-radius: 0; }
-      .dl-widget { display: none; }
+      .sidebar, .dl-widget { display: none; }
+      .layout { padding: 0; }
+      .page { box-shadow: none; border-radius: 0; }
     }
 
-    /* Mobile */
+    /* ── Mobile ── */
+    @media (max-width: 900px) {
+      .layout { flex-direction: column; padding: 24px 16px 48px; }
+      .sidebar { width: 100%; position: static; }
+      .cred-card { display: inline-flex; flex-direction: column; }
+    }
     @media (max-width: 600px) {
       .header { padding: 28px 24px 24px; }
       .body { padding: 24px 24px 36px; }
       .header h1 { font-size: 1.7rem; }
       .job-header { flex-direction: column; gap: 2px; }
       .edu-row { flex-direction: column; }
+      .dl-widget { top: 16px; left: 16px; }
     }
   </style>
 </head>
 <body>
+
+  <!-- Download widget — top left -->
   <div class="dl-widget">
+    <button class="dl-toggle" onclick="toggleMenu()">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Download
+    </button>
     <div class="dl-menu" id="dl-menu">
       <button class="dl-item" onclick="downloadPDF()">
         <span class="dl-item-icon icon-pdf">
@@ -296,90 +353,186 @@
       </a>
       <div id="pdf-loading">Generating PDF...</div>
     </div>
-    <button class="dl-toggle" onclick="toggleMenu()">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Download
-    </button>
   </div>
 
-  <div class="page" id="resume-content">
+  <div class="layout">
 
-    <header class="header">
-      <h1>Marcus Jardinez</h1>
-      <div class="contact-bar">
-        <span>Johnston, RI</span>
-        <span class="sep">|</span>
-        <span><a href="tel:4014269108">(401) 426-9108</a></span>
-        <span class="sep">|</span>
-        <span><a href="mailto:Mark2k10@gmail.com">Mark2k10@gmail.com</a></span>
-        <span class="sep">|</span>
-        <span><a href="https://linkedin.com/in/marcusjardinez" target="_blank" rel="noopener">linkedin.com/in/marcusjardinez</a></span>
+    <!-- Resume -->
+    <div class="page" id="resume-content">
+      <header class="header">
+        <h1>Marcus Jardinez</h1>
+        <div class="contact-bar">
+          <span>Johnston, RI</span>
+          <span class="sep">|</span>
+          <span><a href="tel:4014269108">(401) 426-9108</a></span>
+          <span class="sep">|</span>
+          <span><a href="mailto:Mark2k10@gmail.com">Mark2k10@gmail.com</a></span>
+          <span class="sep">|</span>
+          <span><a href="https://linkedin.com/in/marcusjardinez" target="_blank" rel="noopener">linkedin.com/in/marcusjardinez</a></span>
+        </div>
+      </header>
+
+      <div class="body">
+
+        <section class="section summary">
+          <div class="section-title">Summary</div>
+          <p>IT Operations Specialist with 3 years of experience delivering endpoint support and device lifecycle management in large-scale enterprise environments. Skilled in client OS support, hardware imaging and deployment, L1/L2 troubleshooting, and peripheral integration across wired and wireless networks. Proven ability to interface directly with end users, resolve issues efficiently, and maintain compliance with corporate IT security policies. Certified across CompTIA, Microsoft Azure, and AWS. Eager to apply hands-on technical expertise and a proven service-first mindset to deliver reliable IT operations in any dynamic enterprise environment.</p>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Experience</div>
+
+          <div class="job">
+            <div class="job-header">
+              <span class="job-title">IT Operations Specialist &mdash; Dassault Syst&egrave;mes</span>
+              <span class="job-dates">August 2023 &mdash; Present</span>
+            </div>
+            <div class="job-meta">Johnston, RI <span class="badge">Contractor</span></div>
+            <ul>
+              <li>Provided L1 and L2 technical support to on-site and remote end users via phone, chat, and email, resolving hardware, software, client OS, and peripheral compatibility issues in alignment with departmental policy and security regulations.</li>
+              <li>Imaged, configured, and deployed Windows workstations and laptops for new hire onboarding, hardware replacements, and enterprise refresh cycles &mdash; maintaining consistent standards across large-scale client rollouts.</li>
+              <li>Performed software installations, OS upgrades, and routine patching across client machines, ensuring compliance with corporate IT security policies and minimizing recurring issues through documentation and escalation.</li>
+              <li>Supported and maintained local IT infrastructure including laptops, desktops, tablets, printers, AV systems, and unified communications devices connected to the enterprise LAN.</li>
+              <li>Tracked and reconciled IT assets in coordination with the asset management team, maintaining deployment accuracy, inventory integrity, and full hardware lifecycle accountability.</li>
+              <li>Served as a technical resource for colleagues on hardware and software support issues, contributing to consistent service delivery and high customer satisfaction.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <div class="job-header">
+              <span class="job-title">Table Games Dealer &mdash; Bally&rsquo;s Twin River Casino</span>
+              <span class="job-dates">August 2015 &mdash; January 2023</span>
+            </div>
+            <div class="job-meta">Lincoln, RI</div>
+            <ul>
+              <li>Delivered high-quality customer service across blackjack, craps, roulette, and baccarat while maintaining strict compliance with gaming regulations and procedural standards.</li>
+              <li>Monitored gameplay for accuracy and fairness; resolved patron disputes professionally in coordination with management.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Education</div>
+          <div class="edu-row">
+            <span class="edu-degree">Bachelor of Science in Information Technology</span>
+            <span class="edu-date">Graduated March 2025</span>
+          </div>
+          <div class="edu-school">Western Governors University</div>
+        </section>
+
+        <section class="section">
+          <div class="section-title">Certifications</div>
+          <div class="cert-grid">
+            <span class="cert-pill">CompTIA A+</span>
+            <span class="cert-pill">CompTIA Network+</span>
+            <span class="cert-pill">CompTIA Security+</span>
+            <span class="cert-pill">AWS Certified Cloud Practitioner</span>
+            <span class="cert-pill">Microsoft Azure Fundamentals (AZ-900)</span>
+            <span class="cert-pill">LPI Linux Essentials</span>
+            <span class="cert-pill">ITIL&reg; v4 Foundation</span>
+          </div>
+        </section>
+
       </div>
-    </header>
-
-    <div class="body">
-
-      <section class="section summary">
-        <div class="section-title">Summary</div>
-        <p>IT Operations Specialist with 3 years of experience delivering endpoint support and device lifecycle management in large-scale enterprise environments. Skilled in client OS support, hardware imaging and deployment, L1/L2 troubleshooting, and peripheral integration across wired and wireless networks. Proven ability to interface directly with end users, resolve issues efficiently, and maintain compliance with corporate IT security policies. Certified across CompTIA, Microsoft Azure, and AWS. Eager to apply hands-on technical expertise and a proven service-first mindset to deliver reliable IT operations in any dynamic enterprise environment.</p>
-      </section>
-
-      <section class="section">
-        <div class="section-title">Experience</div>
-
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">IT Operations Specialist &mdash; Dassault Syst&egrave;mes</span>
-            <span class="job-dates">August 2023 &mdash; Present</span>
-          </div>
-          <div class="job-meta">Johnston, RI <span class="badge">Contractor</span></div>
-          <ul>
-            <li>Provided L1 and L2 technical support to on-site and remote end users via phone, chat, and email, resolving hardware, software, client OS, and peripheral compatibility issues in alignment with departmental policy and security regulations.</li>
-            <li>Imaged, configured, and deployed Windows workstations and laptops for new hire onboarding, hardware replacements, and enterprise refresh cycles &mdash; maintaining consistent standards across large-scale client rollouts.</li>
-            <li>Performed software installations, OS upgrades, and routine patching across client machines, ensuring compliance with corporate IT security policies and minimizing recurring issues through documentation and escalation.</li>
-            <li>Supported and maintained local IT infrastructure including laptops, desktops, tablets, printers, AV systems, and unified communications devices connected to the enterprise LAN.</li>
-            <li>Tracked and reconciled IT assets in coordination with the asset management team, maintaining deployment accuracy, inventory integrity, and full hardware lifecycle accountability.</li>
-            <li>Served as a technical resource for colleagues on hardware and software support issues, contributing to consistent service delivery and high customer satisfaction.</li>
-          </ul>
-        </div>
-
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">Table Games Dealer &mdash; Bally&rsquo;s Twin River Casino</span>
-            <span class="job-dates">August 2015 &mdash; January 2023</span>
-          </div>
-          <div class="job-meta">Lincoln, RI</div>
-          <ul>
-            <li>Delivered high-quality customer service across blackjack, craps, roulette, and baccarat while maintaining strict compliance with gaming regulations and procedural standards.</li>
-            <li>Monitored gameplay for accuracy and fairness; resolved patron disputes professionally in coordination with management.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-title">Education</div>
-        <div class="edu-row">
-          <span class="edu-degree">Bachelor of Science in Information Technology</span>
-          <span class="edu-date">Graduated March 2025</span>
-        </div>
-        <div class="edu-school">Western Governors University</div>
-      </section>
-
-      <section class="section">
-        <div class="section-title">Certifications</div>
-        <div class="cert-grid">
-          <span class="cert-pill">CompTIA A+</span>
-          <span class="cert-pill">CompTIA Network+</span>
-          <span class="cert-pill">CompTIA Security+</span>
-          <span class="cert-pill">AWS Certified Cloud Practitioner</span>
-          <span class="cert-pill">Microsoft Azure Fundamentals (AZ-900)</span>
-          <span class="cert-pill">LPI Linux Essentials</span>
-          <span class="cert-pill">ITIL&reg; v4 Foundation</span>
-        </div>
-      </section>
-
     </div>
+
+    <!-- Verification Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-title">Verify Credentials</div>
+
+      <div class="cred-card">
+        <div class="cred-name">B.S. Information Technology</div>
+        <div class="cred-issuer">Western Governors University &middot; Mar 2025</div>
+        <div class="cred-actions">
+          <span class="cred-note">Verification link coming soon.</span>
+        </div>
+      </div>
+
+      <div class="cred-card">
+        <div class="cred-name">CompTIA A+</div>
+        <div class="cred-issuer">CompTIA</div>
+        <div class="cred-actions">
+          <a class="verify-btn" href="https://cp.certmetrics.com/comptia/en/public/verify/credential/LL15E4GYEMQQ1TKK" target="_blank" rel="noopener">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            Verify
+          </a>
+        </div>
+      </div>
+
+      <div class="cred-card">
+        <div class="cred-name">CompTIA Network+</div>
+        <div class="cred-issuer">CompTIA</div>
+        <div class="cred-actions">
+          <a class="verify-btn" href="https://cp.certmetrics.com/comptia/en/public/verify/credential/Z4VS3B4YE2F11NS6" target="_blank" rel="noopener">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            Verify
+          </a>
+        </div>
+      </div>
+
+      <div class="cred-card">
+        <div class="cred-name">CompTIA Security+</div>
+        <div class="cred-issuer">CompTIA</div>
+        <div class="cred-actions">
+          <a class="verify-btn" href="https://cp.certmetrics.com/comptia/en/public/verify/credential/BKYVB0VQNEREQQ5D" target="_blank" rel="noopener">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            Verify
+          </a>
+        </div>
+      </div>
+
+      <div class="cred-card">
+        <div class="cred-name">AWS Cloud Practitioner</div>
+        <div class="cred-issuer">Amazon Web Services</div>
+        <div class="cred-actions">
+          <a class="verify-btn" href="https://cp.certmetrics.com/amazon/en/public/verify/credential/17fc910f1c7548d6a1ca2e685d708df7" target="_blank" rel="noopener">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            Verify
+          </a>
+        </div>
+      </div>
+
+      <div class="cred-card">
+        <div class="cred-name">Azure Fundamentals (AZ-900)</div>
+        <div class="cred-issuer">Microsoft</div>
+        <div class="cred-actions">
+          <a class="verify-btn" href="https://learn.microsoft.com/en-us/users/marcusjardinez-8133/credentials/a4f731c0f05c9b07" target="_blank" rel="noopener">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            Verify
+          </a>
+        </div>
+      </div>
+
+      <div class="cred-card">
+        <div class="cred-name">LPI Linux Essentials</div>
+        <div class="cred-issuer">Linux Professional Institute</div>
+        <div class="cred-actions">
+          <a class="verify-btn" href="https://cs.lpi.org/caf/Xamman/certification/verify/LPI000643778/9xww8wh2ts" target="_blank" rel="noopener">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            Verify
+          </a>
+        </div>
+      </div>
+
+      <div class="cred-card">
+        <div class="cred-name">ITIL&reg; v4 Foundation</div>
+        <div class="cred-issuer">PeopleCert</div>
+        <div class="cred-actions">
+          <a class="verify-btn" href="https://www.peoplecert.org/for-corporations/certificate-verification-service" target="_blank" rel="noopener">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            Verify
+          </a>
+          <button class="copy-btn" onclick="copyCode('GR671727448MJ', this)">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy ID
+          </button>
+        </div>
+        <div class="cred-note">Requires CAPTCHA &mdash; enter cert # GR671727448MJ on the verify page.</div>
+      </div>
+
+    </aside>
   </div>
+
   <script>
     function toggleMenu() {
       document.getElementById('dl-menu').classList.toggle('open');
@@ -401,6 +554,13 @@
       }).from(document.getElementById('resume-content')).save().then(() => {
         loading.style.display = 'none';
         document.getElementById('dl-menu').classList.remove('open');
+      });
+    }
+    function copyCode(text, btn) {
+      navigator.clipboard.writeText(text).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> Copied!';
+        setTimeout(() => { btn.innerHTML = orig; }, 2000);
       });
     }
   </script>
