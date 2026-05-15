@@ -21,17 +21,16 @@
     /* ── Layout ── */
     .layout {
       display: flex;
-      align-items: flex-start;
+      flex-direction: column;
       gap: 24px;
-      max-width: 1180px;
+      max-width: 860px;
       margin: 0 auto;
       padding: 40px 24px 60px;
     }
 
     /* ── Resume card ── */
     .page {
-      flex: 1;
-      min-width: 0;
+      width: 100%;
       background: #fff;
       border-radius: 10px;
       box-shadow: 0 4px 24px rgba(0,0,0,0.08);
@@ -149,10 +148,12 @@
 
     /* ── Sidebar ── */
     .sidebar {
-      width: 256px;
-      flex-shrink: 0;
-      position: sticky;
-      top: 24px;
+      width: 100%;
+    }
+    .cred-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+      gap: 8px;
     }
 
     .sidebar-title {
@@ -310,9 +311,8 @@
 
     /* ── Mobile ── */
     @media (max-width: 900px) {
-      .layout { flex-direction: column; padding: 24px 16px 48px; }
-      .sidebar { width: 100%; position: static; }
-      .cred-card { display: inline-flex; flex-direction: column; }
+      .layout { padding: 24px 16px 48px; }
+      .cred-cards-grid { grid-template-columns: 1fr; }
     }
     @media (max-width: 600px) {
       .header { padding: 28px 24px 24px; }
@@ -440,6 +440,7 @@
     <aside class="sidebar">
       <div class="sidebar-title">Verify Credentials</div>
 
+      <div class="cred-cards-grid">
       <div class="cred-card">
         <div class="cred-name">B.S. Information Technology</div>
         <div class="cred-issuer">Western Governors University &middot; Mar 2025</div>
@@ -530,6 +531,7 @@
         <div class="cred-note">Requires CAPTCHA &mdash; enter cert # GR671727448MJ on the verify page.</div>
       </div>
 
+      </div><!-- end cred-cards-grid -->
     </aside>
   </div>
 
