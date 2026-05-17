@@ -59,6 +59,21 @@
       color: #fff;
       padding: 40px 48px 32px;
     }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .headshot {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 3px solid rgba(255,255,255,0.2);
+      flex-shrink: 0;
+    }
+    .header-text { flex: 1; }
     .header h1 {
       font-size: 2.2rem;
       font-weight: 700;
@@ -334,6 +349,8 @@
     @media (max-width: 600px) {
       .header { padding: 28px 24px 24px; }
       .body { padding: 24px 24px 36px; }
+      .header-inner { flex-direction: column; align-items: flex-start; gap: 16px; }
+      .headshot { width: 72px; height: 72px; }
       .header h1 { font-size: 1.7rem; }
       .job-header { flex-direction: column; gap: 2px; }
       .edu-row { flex-direction: column; }
@@ -377,15 +394,20 @@
     <!-- Resume -->
     <div class="page" id="resume-content">
       <header class="header">
-        <h1>Marcus Jardinez</h1>
-        <div class="contact-bar">
-          <span>Johnston, RI</span>
-          <span class="sep">|</span>
-          <span><a href="tel:4014269108">(401) 426-9108</a></span>
-          <span class="sep">|</span>
-          <span><a href="mailto:Mark2k10@gmail.com">Mark2k10@gmail.com</a></span>
-          <span class="sep">|</span>
-          <span><a href="https://linkedin.com/in/marcusjardinez" target="_blank" rel="noopener">linkedin.com/in/marcusjardinez</a></span>
+        <div class="header-inner">
+          <img src="headshot.jpg" alt="Marcus Jardinez" class="headshot" />
+          <div class="header-text">
+            <h1>Marcus Jardinez</h1>
+            <div class="contact-bar">
+              <span>Johnston, RI</span>
+              <span class="sep">|</span>
+              <span><a href="tel:4014269108">(401) 426-9108</a></span>
+              <span class="sep">|</span>
+              <span><a href="mailto:Mark2k10@gmail.com">Mark2k10@gmail.com</a></span>
+              <span class="sep">|</span>
+              <span><a href="https://linkedin.com/in/marcusjardinez" target="_blank" rel="noopener">linkedin.com/in/marcusjardinez</a></span>
+            </div>
+          </div>
         </div>
       </header>
 
